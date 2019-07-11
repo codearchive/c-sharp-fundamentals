@@ -15,7 +15,11 @@ namespace unit_05_02
             //synth.Speak("Hello! This is the grade book program");
 
             GradeBook book = new GradeBook();
+
+            book.NameChanged = new NameChangedDelegate(OnNameChanged);
+
             book.Name = "Pavel's Grade Book";
+            book.Name = "Grade Book";
             book.Name = null;
             book.AddGrade(91);
             book.AddGrade(89.5f);
@@ -26,6 +30,11 @@ namespace unit_05_02
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", (int)stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
+        }
+
+        static void OnNameChanged(string exisitingName, string newName)
+        {
+            Console.WriteLine($"Grade book changing name from {exisitingName} to {newName}");
         }
 
         static void WriteResult(string description, int result)
