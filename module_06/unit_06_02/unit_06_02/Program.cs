@@ -24,7 +24,10 @@ namespace unit_06_02
             {
                 Console.WriteLine(ex.Message);
             }
-            
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
 
             book.AddGrade(91);
             book.AddGrade(89.5f);
