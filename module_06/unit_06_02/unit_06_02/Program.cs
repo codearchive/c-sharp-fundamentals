@@ -17,14 +17,14 @@ namespace unit_06_02
 
             book.AddGrade(91);
             book.AddGrade(89.5f);
-            book.AddGrade(75);
+            book.AddGrade(55);
 
             GradeStatistics stats = book.ComputeStatistics();
             Console.WriteLine(book.Name);
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
-            WriteResult("Grade", stats.LetterGrade);
+            WriteResult(stats.Description, stats.LetterGrade);
         }
 
         static void WriteResult(string description, string result)
