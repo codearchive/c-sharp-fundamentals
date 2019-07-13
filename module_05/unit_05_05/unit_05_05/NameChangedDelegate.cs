@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace unit_05_02
 {
-    public delegate void NameChangedDelegate(string exisitingName, string newName);
+    public delegate void NameChangedDelegate(object sender, NameChangedEventArgs args);
 }
