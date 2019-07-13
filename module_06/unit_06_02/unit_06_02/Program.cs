@@ -14,6 +14,7 @@ namespace unit_06_02
             //synth.Speak("Hello! This is the grade book program");
 
             GradeBook book = new GradeBook();
+            book.Name = null;
 
             book.AddGrade(91);
             book.AddGrade(89.5f);
