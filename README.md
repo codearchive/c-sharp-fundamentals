@@ -20,3 +20,5 @@ C# Fundamentals covers all the essential topics you need for developing with the
     - [Unit 5.2 - 5.7](module_05/unit_05_05/)
 - [Module 6](module_06)
     - [Unit 6.2 - 6.9](module_06/unit_06_02/)
+- [Module 7](module_07)
+    - [Unit 7.3 - 7.8](module_07/unit_07_03/)
