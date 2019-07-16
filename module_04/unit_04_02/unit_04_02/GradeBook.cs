@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace unit_03_04
+namespace unit_04_02
 {
     public class GradeBook
     {
@@ -33,6 +33,8 @@ namespace unit_03_04
         {
             grades.Add(grade);
         }
+
+        public string Name;
 
         private List<float> grades;
     }
