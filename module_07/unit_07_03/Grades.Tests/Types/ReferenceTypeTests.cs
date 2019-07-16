@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using unit_07_03;
 
 namespace Grades.Tests.Types
@@ -72,8 +68,8 @@ namespace Grades.Tests.Types
 
         private void GiveBookANames(ref GradeBook book)
         {
-            book = new GradeBook();
-            book.Name = "A GradeBook";
+            if (book == null) throw new ArgumentNullException(nameof(book));
+            book = new GradeBook {Name = "A GradeBook"};
         }
 
         [TestMethod]

@@ -1,15 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace unit_07_03
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             IGradeTracker book = CreateGradeBook();
 
@@ -27,6 +23,12 @@ namespace unit_07_03
         private static void WriteResults(IGradeTracker book)
         {
             GradeStatistics stats = book.ComputeStatistics();
+
+            foreach (float grade in book)
+            {
+                Console.WriteLine(grade);
+            }
+
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
@@ -52,6 +54,7 @@ namespace unit_07_03
             book.AddGrade(55);
         }
 
+        /*
         private static void GetBookName(IGradeTracker book)
         {
             try
@@ -68,6 +71,7 @@ namespace unit_07_03
                 Console.WriteLine("Something went wrong!");
             }
         }
+        */
 
         static void WriteResult(string description, string result)
         {

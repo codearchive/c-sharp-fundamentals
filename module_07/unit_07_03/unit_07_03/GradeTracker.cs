@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace unit_07_03
 {
@@ -12,6 +9,7 @@ namespace unit_07_03
         public abstract void AddGrade(float grade);
         public abstract GradeStatistics ComputeStatistics();
         public abstract void WriteGrades(TextWriter destination);
+        public abstract IEnumerator GetEnumerator();
 
         public string Name
         {

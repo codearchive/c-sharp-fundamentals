@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace unit_07_03
 {
@@ -13,11 +9,11 @@ namespace unit_07_03
             Console.WriteLine("ThrowAwayGradeBook::ComputeStatistics");
             
             float lowest = float.MaxValue;
-            foreach (float grade in grades)
+            foreach (float grade in Grades)
             {
                 lowest = Math.Min(grade, lowest);
             }
-            grades.Remove(lowest);
+            Grades.Remove(lowest);
             return base.ComputeStatistics();
         }
     }
